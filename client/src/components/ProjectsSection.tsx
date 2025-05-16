@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAnimation } from "@/hooks/use-animation";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Eye } from "lucide-react";
 import { projects, projectCategories } from "@/data/portfolio-data";
 
 export default function ProjectsSection() {
@@ -82,7 +82,15 @@ export default function ProjectsSection() {
                     </div>
                   </div>
                   <div className="p-6 pt-0 mt-auto">
-                    <div className="flex space-x-3">
+                    <div className="flex flex-wrap gap-3">
+                      <a 
+                        href="https://pedrogualberto1203.github.io/Cloud_Cafe/" 
+                        className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary-light" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Eye className="mr-1 inline-block h-4 w-4" /> Visualizar
+                      </a>
                       {project.repo && (
                         <a 
                           href={project.repo} 

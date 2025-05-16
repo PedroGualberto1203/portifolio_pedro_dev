@@ -2,9 +2,9 @@
 export const skills = [
   { name: "C#", percentage: 90 },
   { name: ".NET Core", percentage: 85 },
-  { name: "SQL", percentage: 80 },
-  { name: "Entity Framework", percentage: 75 },
-  { name: "REST APIs", percentage: 85 }
+  { name: "SQL", percentage: 70 },
+  { name: "JavaScript", percentage: 65 },
+  { name: "HTML5 e CSS3", percentage: 85 }
 ];
 
 export const competencies = [
@@ -32,11 +32,10 @@ export const competencies = [
 
 export const otherTechnologies = [
   "ASP.NET MVC",
-  "LINQ",
-  "SQL Server",
+  "MySQL",
   "Git",
-  "Azure",
-  "Docker",
+  "C",
+  "GitHub",
   "Web APIs",
   "Unit Testing"
 ];
@@ -44,29 +43,13 @@ export const otherTechnologies = [
 // Experience section data
 export const experiences = [
   {
-    title: "Desenvolvedor de Software Backend",
-    company: "Tech Company",
-    period: "2023 - Atual",
-    description: "Desenvolvimento de aplicações backend utilizando C# e .NET Core, implementação de APIs RESTful, integração com bancos de dados SQL Server e otimização de performance.",
-    technologies: ["C#", ".NET Core", "SQL", "REST APIs"],
+    title: "Estagiário de Suporte Técnico em TI",
+    company: "Open Data Center",
+    period: "09/2024 - 02/2025",
+    description: "Desenvolvi o projeto Cloud Café para otimizar pedidos na cantina da empresa. O cardápio online permite que funcionários adicionem itens ao carrinho e enviem o pedido automaticamente via API do WhatsApp, agilizando a comunicação e a entrega. Além disso, realizei manutenção de hardware, otimização de sistemas Windows e suporte à infraestrutura de redes, incluindo criação de máquinas virtuais e configuração de firewalls.",
+    technologies: ["HTML", "CSS", "SQL", "JavaScript", "Node.Js", "Redes"],
     icon: "briefcase"
   },
-  {
-    title: "Desenvolvedor .NET",
-    company: "Software Solutions",
-    period: "2021 - 2022",
-    description: "Desenvolvimento e manutenção de sistemas utilizando C# e .NET Framework, implementação de novas funcionalidades e correção de bugs, trabalho com Entity Framework e bancos de dados SQL.",
-    technologies: ["C#", ".NET", "Entity Framework", "SQL Server"],
-    icon: "code"
-  },
-  {
-    title: "Estágio em Desenvolvimento",
-    company: "IT Systems",
-    period: "2020 - 2021",
-    description: "Suporte no desenvolvimento de aplicações web, aprendizado prático de C# e .NET, colaboração em projetos internos e participação em reuniões técnicas.",
-    technologies: ["C#", "ASP.NET", "SQL", "Git"],
-    icon: "laptop-code"
-  }
 ];
 
 // Projects section data
