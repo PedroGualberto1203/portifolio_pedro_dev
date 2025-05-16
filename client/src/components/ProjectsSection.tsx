@@ -83,14 +83,6 @@ export default function ProjectsSection() {
                   </div>
                   <div className="p-6 pt-0 mt-auto">
                     <div className="flex flex-wrap gap-3">
-                      <a 
-                        href="https://pedrogualberto1203.github.io/Cloud_Cafe/" 
-                        className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary-light" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                      >
-                        <Eye className="mr-1 inline-block h-4 w-4" /> Visualizar
-                      </a>
                       {project.repo && (
                         <a 
                           href={project.repo} 
@@ -104,11 +96,11 @@ export default function ProjectsSection() {
                       {project.demo && (
                         <a 
                           href={project.demo} 
-                          className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary" 
+                          className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary-light" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
-                          <ExternalLink className="mr-1 inline-block h-4 w-4" /> Demo
+                          <Eye className="mr-1 inline-block h-4 w-4" /> Visualizar
                         </a>
                       )}
                     </div>

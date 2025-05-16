@@ -112,7 +112,7 @@ export default function ContactSection() {
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
                     <a href="mailto:pedro.gualberto@email.com" className="text-gray-400 hover:text-primary transition-colors hover-zoom">
-                      pedro.gualberto@email.com
+                      pedro.gualberto1203@email.com
                     </a>
                   </div>
                 </div>
@@ -135,7 +135,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Localização</h4>
-                    <p className="text-gray-400">Belo Horizonte, Minas Gerais, Brasil</p>
+                    <p className="text-gray-400">Goiânia, Goiás, Brasil</p>
                   </div>
                 </div>
                 
@@ -151,7 +151,7 @@ export default function ContactSection() {
                       rel="noopener noreferrer" 
                       className="text-gray-400 hover:text-primary transition-colors hover-zoom"
                     >
-                      pedro-gualberto
+                      Pedro Gualberto
                     </a>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function ContactSection() {
                       rel="noopener noreferrer" 
                       className="text-gray-400 hover:text-primary transition-colors hover-zoom"
                     >
-                      @DevAlvinegro
+                      @PedroByte
                     </a>
                   </div>
                 </div>
