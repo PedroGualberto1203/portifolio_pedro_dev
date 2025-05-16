@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <a href="#" className="text-xl font-bold font-poppins text-primary">
-              Pedro<span className="text-light">.dev</span>
+              Pedro<span className="text-light">.Byte</span>
             </a>
             <p className="text-gray-400 mt-2">Desenvolvedor Backend especializado em C# e .NET</p>
           </div>
@@ -30,6 +30,15 @@ export default function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
+            </a>
+            <a 
+              href="https://www.youtube.com/@DevAlvinegro" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gray-400 hover:text-primary transition-colors hover-zoom"
+              aria-label="YouTube"
+            >
+              <Youtube className="h-6 w-6" />
             </a>
             <a 
               href="mailto:pedro.gualberto@email.com" 

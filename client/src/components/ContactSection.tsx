@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAnimation } from "@/hooks/use-animation";
-import { RectangleEllipsis, MapPin, Linkedin, Github, Mail, Phone } from "lucide-react";
+import { RectangleEllipsis, MapPin, Linkedin, Github, Mail, Phone, Youtube } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -169,6 +169,23 @@ export default function ContactSection() {
                       className="text-gray-400 hover:text-primary transition-colors hover-zoom"
                     >
                       PedroGualberto1203
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <Youtube className="text-white h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">YouTube</h4>
+                    <a 
+                      href="https://www.youtube.com/@DevAlvinegro" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-gray-400 hover:text-primary transition-colors hover-zoom"
+                    >
+                      @DevAlvinegro
                     </a>
                   </div>
                 </div>

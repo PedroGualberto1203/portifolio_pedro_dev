@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-dark-light bg-opacity-90 backdrop-blur-md shadow-lg">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-2xl font-bold font-poppins text-primary">
-          Pedro<span className="text-light">.dev</span>
+          Pedro<span className="text-light">.Byte</span>
         </a>
         <div className="md:flex hidden space-x-6">
           <a href="#home" className="hover:text-primary transition-colors">Home</a>

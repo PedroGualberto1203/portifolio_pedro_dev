@@ -86,7 +86,7 @@ export default function ProjectsSection() {
                       {project.repo && (
                         <a 
                           href={project.repo} 
-                          className="text-primary hover:text-primary-light hover-zoom px-3 py-1 rounded-full border border-primary bg-primary bg-opacity-10" 
+                          className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                       {project.demo && (
                         <a 
                           href={project.demo} 
-                          className="text-primary hover:text-primary-light hover-zoom px-3 py-1 rounded-full border border-primary bg-primary bg-opacity-10" 
+                          className="text-white hover:text-white hover-zoom px-3 py-1 rounded-full bg-primary" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
             href="https://github.com/PedroGualberto1203" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-block px-6 py-3 bg-primary hover:bg-primary-light text-white rounded-lg font-medium transition-colors"
+            className="inline-block px-6 py-3 bg-primary hover:bg-primary-light text-white rounded-lg font-medium transition-colors hover-zoom"
           >
             <Github className="mr-2 inline-block h-5 w-5" /> Ver mais no GitHub
           </a>
