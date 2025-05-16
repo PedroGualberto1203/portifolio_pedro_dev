@@ -76,7 +76,7 @@ export default function ExperienceSection() {
                       {experience.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="text-sm px-3 py-1 rounded-full bg-primary bg-opacity-20 text-primary hover-zoom"
+                          className="text-sm px-3 py-1 rounded-full bg-primary bg-opacity-20 text-white font-medium hover-zoom"
                         >
                           {tech}
                         </span>

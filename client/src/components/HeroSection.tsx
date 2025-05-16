@@ -142,9 +142,12 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center animate-bounce">
-        <a href="#skills" className="text-primary">
-          <ChevronDown className="h-6 w-6" />
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center w-10 h-16">
+        <a 
+          href="#skills" 
+          className="bg-dark border border-primary/30 rounded-full py-3 px-5 text-primary hover:bg-primary/10 transition-all duration-300 hover-zoom flex items-center justify-center"
+        >
+          <span className="text-sm font-medium">Ver</span>
         </a>
       </div>
     </section>
