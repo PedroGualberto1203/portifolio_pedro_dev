@@ -125,32 +125,26 @@ export default function HeroSection() {
           </div>
           <div ref={rightColRef} className="hidden-element flex justify-center">
             <div className="animation-container relative w-64 h-64 md:w-80 md:h-80">
-              {/* Versão mais clean da animação */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-3xl border border-primary/20 backdrop-blur-sm flex items-center justify-center">
-                <div className="relative">
-                  {/* Camada de fundo com brilho */}
-                  <div className="absolute inset-0 bg-primary/5 rounded-3xl blur-xl transform scale-90"></div>
-                  
-                  {/* Círculo principal */}
-                  <div className="relative z-10 bg-dark border-2 border-primary/30 rounded-full p-10 shadow-xl shadow-primary/20">
-                    <Code className="w-20 h-20 text-primary" />
-                  </div>
-                  
-                  {/* Círculos decorativos */}
-                  <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary/20 rounded-full blur-sm"></div>
-                  <div className="absolute -bottom-8 -left-4 w-16 h-16 bg-accent/20 rounded-full blur-sm"></div>
+              {/* Animação 3D inspirada no Discord */}
+              <div className="floating-shape shape-1 absolute w-32 h-32 bg-primary opacity-70 rounded-2xl"></div>
+              <div className="floating-shape shape-2 absolute w-28 h-28 bg-secondary opacity-60 rounded-full"></div>
+              <div className="floating-shape shape-3 absolute w-24 h-24 bg-primary-light opacity-80 rounded-lg"></div>
+              <div className="floating-shape shape-4 absolute w-40 h-16 bg-accent opacity-50 rounded-xl"></div>
+              <div className="floating-shape shape-5 absolute w-20 h-36 bg-primary-light opacity-60 rounded-2xl"></div>
+              
+              {/* Ícone central */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <div className="rounded-full bg-primary/20 backdrop-blur-md p-6 border-2 border-primary/30">
+                  <Code className="w-20 h-20 text-primary" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center w-10 h-16">
-        <a 
-          href="#skills" 
-          className="bg-dark border border-primary/30 rounded-full py-3 px-5 text-primary hover:bg-primary/10 transition-all duration-300 hover-zoom flex items-center justify-center"
-        >
-          <span className="text-sm font-medium">Ver</span>
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-center animate-bounce">
+        <a href="#skills" className="text-primary">
+          <ChevronDown className="h-6 w-6" />
         </a>
       </div>
     </section>
