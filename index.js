@@ -51,7 +51,7 @@ var vite_config_default = defineConfig({
       )
     ] : []
   ],
-  base: "/portifolio_pedro_dev/",
+  base: "/portifolio_pedro_dev",
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -59,7 +59,7 @@ var vite_config_default = defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets")
     }
   },
-  root: path.resolve(import.meta.dirname, "client"),
+  root: path.resolve(import.meta.dirname, "."),
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true
