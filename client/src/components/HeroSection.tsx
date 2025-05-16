@@ -23,30 +23,30 @@ export default function HeroSection() {
   useEffect(() => {
     const typeText = () => {
       const specialty = specialties[currentIndex];
-      let typingSpeed = 100;
+      let typingSpeed = 50; // Faster typing speed
       
       if (isDeleting) {
         setTypedText(specialty.substring(0, typedText.length - 1));
-        typingSpeed = 50;
+        typingSpeed = 30; // Faster deletion
       } else {
         setTypedText(specialty.substring(0, typedText.length + 1));
-        typingSpeed = 100;
+        typingSpeed = 50; // Faster typing
       }
       
       if (!isDeleting && typedText === specialty) {
         setIsDeleting(true);
-        typingSpeed = 1500; // Pause at end
+        typingSpeed = 1000; // Shorter pause at end
       } else if (isDeleting && typedText === '') {
         setIsDeleting(false);
         setCurrentIndex((currentIndex + 1) % specialties.length);
-        typingSpeed = 500; // Pause before typing next
+        typingSpeed = 300; // Shorter pause before typing next
       }
       
       animationRef.current = setTimeout(typeText, typingSpeed);
     };
     
-    // Start typing effect
-    animationRef.current = setTimeout(typeText, 1000);
+    // Start typing effect faster
+    animationRef.current = setTimeout(typeText, 500);
     
     return () => {
       if (animationRef.current) {
@@ -57,14 +57,22 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      {/* Tech background */}
+      {/* Discord-style background */}
       <div 
         className="absolute inset-0 bg-dark-light z-0" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+          background: "linear-gradient(45deg, hsl(235, 85%, 15%), hsl(260, 85%, 20%), hsl(290, 70%, 20%))",
           backgroundSize: "cover", 
-          backgroundPosition: "center", 
-          opacity: 0.2
+          backgroundPosition: "center"
+        }}
+      ></div>
+      {/* Background grid overlay */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: "radial-gradient(hsla(260, 100%, 85%, 0.1) 1px, transparent 1px)",
+          backgroundSize: "30px 30px",
+          opacity: 0.5
         }}
       ></div>
       
@@ -85,13 +93,13 @@ export default function HeroSection() {
             <div className="flex space-x-4">
               <a 
                 href="#contact" 
-                className="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center"
+                className="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center hover-zoom"
               >
                 <RectangleEllipsis className="mr-2 h-5 w-5" /> Contato
               </a>
               <a 
                 href="#projects" 
-                className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center"
+                className="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center hover-zoom"
               >
                 <Code className="mr-2 h-5 w-5" /> Projetos
               </a>
@@ -101,7 +109,7 @@ export default function HeroSection() {
                 href="https://github.com/PedroGualberto1203" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-2xl text-gray-400 hover:text-primary transition-colors"
+                className="text-2xl text-gray-400 hover:text-primary transition-colors hover-zoom"
               >
                 <Github className="h-6 w-6" />
               </a>
@@ -109,7 +117,7 @@ export default function HeroSection() {
                 href="https://www.linkedin.com/in/pedro-gualberto-9a2b62316/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-2xl text-gray-400 hover:text-primary transition-colors"
+                className="text-2xl text-gray-400 hover:text-primary transition-colors hover-zoom"
               >
                 <Linkedin className="h-6 w-6" />
               </a>

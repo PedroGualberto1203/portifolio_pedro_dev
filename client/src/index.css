@@ -13,12 +13,12 @@
   --card-foreground: 0 0% 98%;
   --border: 240 3.7% 15.9%;
   --input: 240 3.7% 15.9%;
-  --primary: 270 68% 47%;
-  --primary-light: 282 50% 60%;
+  --primary: 258 90% 66%;
+  --primary-light: 240 75% 60%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 240 3.7% 15.9%;
+  --secondary: 235 85% 65%;
   --secondary-foreground: 0 0% 98%;
-  --accent: 240 3.7% 15.9%;
+  --accent: 235 85% 65%;
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
@@ -26,11 +26,11 @@
   --radius: 0.5rem;
 }
 
-/* Custom colors for the portfolio */
+/* Custom colors for the portfolio - Discord style */
 :root {
-  --dark: 0 0% 6%;
-  --dark-light: 0 0% 10%;
-  --light: 0 0% 96%;
+  --dark: 230 10% 10%;
+  --dark-light: 230 10% 15%;
+  --light: 230 10% 92%;
 }
 
 @layer base {
@@ -64,13 +64,24 @@
   transform: translateY(0);
 }
 
+/* Interactive elements hover effects */
+.hover-zoom {
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
 /* Typing cursor effect */
 .typed-cursor {
   display: inline-block;
   width: 0.5em;
   height: 1.2em;
   background-color: hsl(var(--primary-light));
-  animation: blink 1s infinite;
+  animation: blink 0.8s infinite;
   margin-left: 4px;
 }
 

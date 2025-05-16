@@ -21,14 +21,22 @@ export default function ExperienceSection() {
 
   return (
     <section id="experience" className="py-20 relative">
-      {/* Tech background */}
+      {/* Discord-style background */}
       <div 
-        className="absolute inset-0 bg-dark z-0" 
+        className="absolute inset-0 z-0" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
+          background: "linear-gradient(180deg, hsl(235, 85%, 15%), hsl(260, 85%, 12%))",
           backgroundSize: "cover", 
-          backgroundPosition: "center", 
-          opacity: 0.1
+          backgroundPosition: "center"
+        }}
+      ></div>
+      {/* Background grid overlay */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: "radial-gradient(hsla(270, 100%, 85%, 0.05) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+          opacity: 0.8
         }}
       ></div>
       
@@ -55,7 +63,7 @@ export default function ExperienceSection() {
                   <div className="absolute left-0 top-0 w-9 h-9 bg-primary rounded-full z-10 flex items-center justify-center">
                     {getIcon(experience.icon)}
                   </div>
-                  <div className="bg-dark-light p-6 rounded-lg shadow-lg">
+                  <div className="bg-dark-light p-6 rounded-lg shadow-lg hover-zoom">
                     <div className="flex justify-between flex-wrap mb-2">
                       <h3 className="text-xl font-bold font-poppins">{experience.title}</h3>
                       <span className="text-primary whitespace-nowrap">{experience.period}</span>
@@ -68,7 +76,7 @@ export default function ExperienceSection() {
                       {experience.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="text-sm px-3 py-1 rounded-full bg-primary bg-opacity-20 text-primary"
+                          className="text-sm px-3 py-1 rounded-full bg-primary bg-opacity-20 text-primary hover-zoom"
                         >
                           {tech}
                         </span>

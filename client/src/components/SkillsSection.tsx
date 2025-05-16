@@ -43,7 +43,7 @@ export default function SkillsSection() {
             
             <div className="grid grid-cols-2 gap-4">
               {competencies.map((competency, index) => (
-                <div className="bg-dark p-4 rounded-lg shadow-lg" key={index}>
+                <div className="bg-dark p-4 rounded-lg shadow-lg hover-zoom" key={index}>
                   {getIcon(competency.icon, "text-primary text-3xl mb-2")}
                   <h4 className="text-lg font-medium mb-1">{competency.name}</h4>
                   <p className="text-gray-400 text-sm">{competency.description}</p>
@@ -60,7 +60,7 @@ export default function SkillsSection() {
             {otherTechnologies.map((tech, index) => (
               <span 
                 key={index} 
-                className="px-4 py-2 bg-dark rounded-full border border-primary text-primary"
+                className="px-4 py-2 bg-dark rounded-full border border-primary text-primary hover-zoom"
               >
                 {tech}
               </span>
