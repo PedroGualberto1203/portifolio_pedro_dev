@@ -106,8 +106,8 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <Mail className="text-primary h-5 w-5" />
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <Mail className="text-white h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
@@ -118,8 +118,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <Phone className="text-primary h-5 w-5" />
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <Phone className="text-white h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">WhatsApp</h4>
@@ -130,8 +130,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <MapPin className="text-primary h-5 w-5" />
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <MapPin className="text-white h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Localização</h4>
@@ -140,8 +140,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <Linkedin className="text-primary h-5 w-5" />
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <Linkedin className="text-white h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">LinkedIn</h4>
@@ -157,8 +157,8 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <Github className="text-primary h-5 w-5" />
+                  <div className="mr-4 bg-dark p-3 rounded-lg hover-zoom">
+                    <Github className="text-white h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">GitHub</h4>

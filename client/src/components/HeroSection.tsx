@@ -23,30 +23,30 @@ export default function HeroSection() {
   useEffect(() => {
     const typeText = () => {
       const specialty = specialties[currentIndex];
-      let typingSpeed = 25; // 2x Faster typing speed
+      let typingSpeed = 16; // 3x Faster typing speed
       
       if (isDeleting) {
         setTypedText(specialty.substring(0, typedText.length - 1));
-        typingSpeed = 15; // 2x Faster deletion
+        typingSpeed = 10; // 3x Faster deletion
       } else {
         setTypedText(specialty.substring(0, typedText.length + 1));
-        typingSpeed = 25; // 2x Faster typing
+        typingSpeed = 16; // 3x Faster typing
       }
       
       if (!isDeleting && typedText === specialty) {
         setIsDeleting(true);
-        typingSpeed = 500; // Shorter pause at end (2x faster)
+        typingSpeed = 333; // Shorter pause at end (3x faster)
       } else if (isDeleting && typedText === '') {
         setIsDeleting(false);
         setCurrentIndex((currentIndex + 1) % specialties.length);
-        typingSpeed = 150; // Shorter pause before typing next (2x faster)
+        typingSpeed = 100; // Shorter pause before typing next (3x faster)
       }
       
       animationRef.current = setTimeout(typeText, typingSpeed);
     };
     
-    // Start typing effect faster (2x faster)
-    animationRef.current = setTimeout(typeText, 250);
+    // Start typing effect faster (3x faster)
+    animationRef.current = setTimeout(typeText, 166);
     
     return () => {
       if (animationRef.current) {
