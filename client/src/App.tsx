@@ -4,6 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 
+
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -14,5 +16,8 @@ function App() {
     </QueryClientProvider>
   );
 }
+
+// Adicione isso em seu App.tsx
+
 
 export default App;
