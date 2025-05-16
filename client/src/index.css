@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 270 68% 47%;
+  --primary-light: 282 50% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+/* Custom colors for the portfolio */
+:root {
+  --dark: 0 0% 6%;
+  --dark-light: 0 0% 10%;
+  --light: 0 0% 96%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom fonts */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Animation classes */
+.hidden-element {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.show-element {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typing cursor effect */
+.typed-cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1.2em;
+  background-color: hsl(var(--primary-light));
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Timeline styles */
+.timeline-line {
+  position: absolute;
+  width: 2px;
+  background-color: hsl(var(--primary));
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  z-index: 0;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  height: 10px;
+  background-color: hsl(var(--dark-light));
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-value {
+  height: 100%;
+  background-color: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--dark));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 6px;
+}
+
+/* Custom background and text colors */
+.bg-dark {
+  background-color: hsl(var(--dark));
+}
+
+.bg-dark-light {
+  background-color: hsl(var(--dark-light));
+}
+
+.text-light {
+  color: hsl(var(--light));
+}
+
+.text-primary {
+  color: hsl(var(--primary));
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+}
+
+.bg-primary-light {
+  background-color: hsl(var(--primary-light));
+}
+
+.border-primary {
+  border-color: hsl(var(--primary));
+}
+
+.hover\:bg-primary:hover {
+  background-color: hsl(var(--primary));
+}
+
+.hover\:bg-primary-light:hover {
+  background-color: hsl(var(--primary-light));
+}
+
+.hover\:text-primary:hover {
+  color: hsl(var(--primary));
+}
+
+.hover\:text-primary-light:hover {
+  color: hsl(var(--primary-light));
+}
