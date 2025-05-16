@@ -23,30 +23,30 @@ export default function HeroSection() {
   useEffect(() => {
     const typeText = () => {
       const specialty = specialties[currentIndex];
-      let typingSpeed = 50; // Faster typing speed
+      let typingSpeed = 25; // 2x Faster typing speed
       
       if (isDeleting) {
         setTypedText(specialty.substring(0, typedText.length - 1));
-        typingSpeed = 30; // Faster deletion
+        typingSpeed = 15; // 2x Faster deletion
       } else {
         setTypedText(specialty.substring(0, typedText.length + 1));
-        typingSpeed = 50; // Faster typing
+        typingSpeed = 25; // 2x Faster typing
       }
       
       if (!isDeleting && typedText === specialty) {
         setIsDeleting(true);
-        typingSpeed = 1000; // Shorter pause at end
+        typingSpeed = 500; // Shorter pause at end (2x faster)
       } else if (isDeleting && typedText === '') {
         setIsDeleting(false);
         setCurrentIndex((currentIndex + 1) % specialties.length);
-        typingSpeed = 300; // Shorter pause before typing next
+        typingSpeed = 150; // Shorter pause before typing next (2x faster)
       }
       
       animationRef.current = setTimeout(typeText, typingSpeed);
     };
     
-    // Start typing effect faster
-    animationRef.current = setTimeout(typeText, 500);
+    // Start typing effect faster (2x faster)
+    animationRef.current = setTimeout(typeText, 250);
     
     return () => {
       if (animationRef.current) {
@@ -124,11 +124,21 @@ export default function HeroSection() {
             </div>
           </div>
           <div ref={rightColRef} className="hidden-element flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
-              alt="Developer workspace" 
-              className="rounded-full border-4 border-primary w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg"
-            />
+            <div className="animation-container relative w-64 h-64 md:w-80 md:h-80">
+              {/* Animação 3D inspirada no Discord */}
+              <div className="floating-shape shape-1 absolute w-32 h-32 bg-primary opacity-70 rounded-2xl"></div>
+              <div className="floating-shape shape-2 absolute w-28 h-28 bg-secondary opacity-60 rounded-full"></div>
+              <div className="floating-shape shape-3 absolute w-24 h-24 bg-primary-light opacity-80 rounded-lg"></div>
+              <div className="floating-shape shape-4 absolute w-40 h-16 bg-accent opacity-50 rounded-xl"></div>
+              <div className="floating-shape shape-5 absolute w-20 h-36 bg-primary-light opacity-60 rounded-2xl"></div>
+              
+              {/* Ícone central */}
+              <div className="absolute inset-0 flex items-center justify-center z-10">
+                <div className="rounded-full bg-primary/20 backdrop-blur-md p-6 border-2 border-primary/30">
+                  <Code className="w-20 h-20 text-primary" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -75,6 +75,79 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
+/* Animação 3D estilo Discord */
+.animation-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.floating-shape {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+  filter: blur(1px);
+}
+
+.shape-1 {
+  top: 10%;
+  left: 10%;
+  transform: rotate(-15deg) translateZ(20px);
+  animation: float1 6s ease-in-out infinite;
+}
+
+.shape-2 {
+  top: 25%;
+  right: 15%;
+  transform: rotate(10deg) translateZ(40px);
+  animation: float2 7s ease-in-out infinite;
+}
+
+.shape-3 {
+  bottom: 20%;
+  left: 20%;
+  transform: rotate(25deg) translateZ(30px);
+  animation: float3 8s ease-in-out infinite;
+}
+
+.shape-4 {
+  bottom: 15%;
+  right: 5%;
+  transform: rotate(-20deg) translateZ(25px);
+  animation: float4 9s ease-in-out infinite;
+}
+
+.shape-5 {
+  top: 40%;
+  left: 30%;
+  transform: rotate(40deg) translateZ(35px);
+  animation: float5 8s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: rotate(-15deg) translateZ(20px) translateY(0px); }
+  50% { transform: rotate(-10deg) translateZ(20px) translateY(-20px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: rotate(10deg) translateZ(40px) translateY(0px); }
+  50% { transform: rotate(15deg) translateZ(40px) translateY(-15px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: rotate(25deg) translateZ(30px) translateY(0px); }
+  50% { transform: rotate(20deg) translateZ(30px) translateY(-25px); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: rotate(-20deg) translateZ(25px) translateY(0px); }
+  50% { transform: rotate(-25deg) translateZ(25px) translateY(-15px); }
+}
+
+@keyframes float5 {
+  0%, 100% { transform: rotate(40deg) translateZ(35px) translateY(0px); }
+  50% { transform: rotate(35deg) translateZ(35px) translateY(-20px); }
+}
+
 /* Typing cursor effect */
 .typed-cursor {
   display: inline-block;
@@ -127,6 +200,24 @@
 ::-webkit-scrollbar-thumb {
   background: hsl(var(--primary));
   border-radius: 6px;
+}
+
+/* Custom scrollbars for education & certifications */
+.education-scrollbar::-webkit-scrollbar,
+.certifications-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.education-scrollbar::-webkit-scrollbar-track,
+.certifications-scrollbar::-webkit-scrollbar-track {
+  background: hsl(var(--dark-light));
+  border-radius: 10px;
+}
+
+.education-scrollbar::-webkit-scrollbar-thumb,
+.certifications-scrollbar::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 10px;
 }
 
 /* Custom background and text colors */

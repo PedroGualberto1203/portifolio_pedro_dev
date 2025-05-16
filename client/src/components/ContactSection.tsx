@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAnimation } from "@/hooks/use-animation";
-import { RectangleEllipsis, MapPin, Linkedin, Github } from "lucide-react";
+import { RectangleEllipsis, MapPin, Linkedin, Github, Mail, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -41,22 +41,27 @@ export default function ContactSection() {
     setIsSubmitting(true);
     
     try {
-      // In a real application, this would send the data to a server
+      // Formato a mensagem para o WhatsApp
+      const whatsappMessage = `*Contato via Portfólio*%0A%0A*Nome:* ${data.name}%0A*Email:* ${data.email}%0A*Assunto:* ${data.subject}%0A%0A*Mensagem:*%0A${data.message.replace(/\n/g, '%0A')}`;
+      
+      // Cria a URL do WhatsApp com o número e a mensagem formatada
+      const whatsappUrl = `https://wa.me/5562996635404?text=${whatsappMessage}`;
+      
+      // Abre o WhatsApp em uma nova aba
+      window.open(whatsappUrl, '_blank');
+      
       console.log("Form submitted", data);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 800));
-      
       toast({
-        title: "Mensagem enviada",
-        description: "Sua mensagem foi enviada com sucesso!",
+        title: "Redirecionando para WhatsApp",
+        description: "Sua mensagem foi formatada e enviada para o WhatsApp!",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Erro ao enviar mensagem",
-        description: "Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde.",
+        title: "Erro ao processar mensagem",
+        description: "Ocorreu um erro ao processar sua mensagem. Tente novamente mais tarde.",
         variant: "destructive"
       });
     } finally {
@@ -102,12 +107,24 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
-                    <RectangleEllipsis className="text-primary h-5 w-5" />
+                    <Mail className="text-primary h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
                     <a href="mailto:pedro.gualberto@email.com" className="text-gray-400 hover:text-primary transition-colors hover-zoom">
                       pedro.gualberto@email.com
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
+                    <Phone className="text-primary h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-1">WhatsApp</h4>
+                    <a href="https://wa.me/5562996635404" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors hover-zoom">
+                      (62) 99663-5404
                     </a>
                   </div>
                 </div>
