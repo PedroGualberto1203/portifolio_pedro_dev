@@ -65,8 +65,25 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-light">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 relative">
+      {/* Discord-style background */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          background: "linear-gradient(135deg, hsl(235, 85%, 12%), hsl(265, 85%, 15%))",
+          backgroundSize: "cover"
+        }}
+      ></div>
+      {/* Background grid overlay */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: "radial-gradient(hsla(270, 100%, 85%, 0.05) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+          opacity: 0.8
+        }}
+      ></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div ref={titleRef} className="text-center mb-16 hidden-element">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-poppins">
             <span className="text-primary">&lt;</span> Contato <span className="text-primary">/&gt;</span>
@@ -84,19 +101,19 @@ export default function ContactSection() {
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full">
+                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
                     <RectangleEllipsis className="text-primary h-5 w-5" />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <a href="mailto:pedro.gualberto@email.com" className="text-gray-400 hover:text-primary transition-colors">
+                    <a href="mailto:pedro.gualberto@email.com" className="text-gray-400 hover:text-primary transition-colors hover-zoom">
                       pedro.gualberto@email.com
                     </a>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full">
+                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
                     <MapPin className="text-primary h-5 w-5" />
                   </div>
                   <div>
@@ -106,7 +123,7 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full">
+                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
                     <Linkedin className="text-primary h-5 w-5" />
                   </div>
                   <div>
@@ -115,7 +132,7 @@ export default function ContactSection() {
                       href="https://www.linkedin.com/in/pedro-gualberto-9a2b62316/" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-gray-400 hover:text-primary transition-colors"
+                      className="text-gray-400 hover:text-primary transition-colors hover-zoom"
                     >
                       pedro-gualberto
                     </a>
@@ -123,7 +140,7 @@ export default function ContactSection() {
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full">
+                  <div className="mr-4 bg-primary bg-opacity-20 p-3 rounded-full hover-zoom">
                     <Github className="text-primary h-5 w-5" />
                   </div>
                   <div>
@@ -132,7 +149,7 @@ export default function ContactSection() {
                       href="https://github.com/PedroGualberto1203" 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-gray-400 hover:text-primary transition-colors"
+                      className="text-gray-400 hover:text-primary transition-colors hover-zoom"
                     >
                       PedroGualberto1203
                     </a>
@@ -224,7 +241,7 @@ export default function ContactSection() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center"
+                    className="w-full bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center justify-center hover-zoom"
                     disabled={isSubmitting}
                   >
                     <RectangleEllipsis className="mr-2 h-5 w-5" /> 

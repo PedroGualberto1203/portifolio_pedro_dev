@@ -9,14 +9,21 @@ export default function EducationSection() {
 
   return (
     <section id="education" className="py-20 relative">
-      {/* Tech background */}
+      {/* Discord-style background */}
       <div 
-        className="absolute inset-0 bg-dark z-0" 
+        className="absolute inset-0 z-0" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
-          backgroundSize: "cover", 
-          backgroundPosition: "center", 
-          opacity: 0.1
+          background: "linear-gradient(220deg, hsl(260, 85%, 15%), hsl(235, 85%, 12%))",
+          backgroundSize: "cover"
+        }}
+      ></div>
+      {/* Background grid overlay */}
+      <div 
+        className="absolute inset-0 z-0" 
+        style={{
+          backgroundImage: "radial-gradient(hsla(270, 100%, 85%, 0.05) 1px, transparent 1px)",
+          backgroundSize: "20px 20px",
+          opacity: 0.8
         }}
       ></div>
       
@@ -35,7 +42,7 @@ export default function EducationSection() {
             </h3>
             
             {education.map((item, index) => (
-              <div className="bg-dark-light p-6 rounded-lg shadow-lg mb-6" key={index}>
+              <div className="bg-dark-light p-6 rounded-lg shadow-lg mb-6 hover-zoom" key={index}>
                 <div className="flex justify-between flex-wrap mb-2">
                   <h4 className="text-xl font-bold font-poppins">{item.degree}</h4>
                   <span className="text-primary whitespace-nowrap">{item.period}</span>
@@ -55,7 +62,7 @@ export default function EducationSection() {
             
             <div className="space-y-6">
               {certifications.map((cert, index) => (
-                <div className="bg-dark-light p-6 rounded-lg shadow-lg" key={index}>
+                <div className="bg-dark-light p-6 rounded-lg shadow-lg hover-zoom" key={index}>
                   <h4 className="text-xl font-bold font-poppins mb-2">{cert.name}</h4>
                   <div className="flex items-center mb-3">
                     <Award className="text-primary mr-2 h-5 w-5" />

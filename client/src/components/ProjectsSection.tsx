@@ -59,7 +59,7 @@ export default function ProjectsSection() {
                 className={`hidden-element project-card`}
                 style={{ display: shouldDisplay ? 'block' : 'none' }}
               >
-                <div className="bg-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
+                <div className="bg-dark rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col hover-zoom">
                   <img 
                     src={project.image} 
                     alt={project.title} 
@@ -74,7 +74,7 @@ export default function ProjectsSection() {
                       {project.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="text-xs px-2 py-1 rounded-full bg-primary bg-opacity-20 text-primary"
+                          className="text-xs px-2 py-1 rounded-full bg-primary bg-opacity-20 text-primary hover-zoom"
                         >
                           {tech}
                         </span>
@@ -86,7 +86,7 @@ export default function ProjectsSection() {
                       {project.repo && (
                         <a 
                           href={project.repo} 
-                          className="text-primary hover:text-primary-light" 
+                          className="text-primary hover:text-primary-light hover-zoom px-3 py-1 rounded-full border border-primary bg-primary bg-opacity-10" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >
@@ -96,7 +96,7 @@ export default function ProjectsSection() {
                       {project.demo && (
                         <a 
                           href={project.demo} 
-                          className="text-primary hover:text-primary-light" 
+                          className="text-primary hover:text-primary-light hover-zoom px-3 py-1 rounded-full border border-primary bg-primary bg-opacity-10" 
                           target="_blank" 
                           rel="noopener noreferrer"
                         >

@@ -17,7 +17,7 @@ export default function Footer() {
               href="https://github.com/PedroGualberto1203" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors hover-zoom"
               aria-label="GitHub"
             >
               <Github className="h-6 w-6" />
@@ -26,14 +26,14 @@ export default function Footer() {
               href="https://www.linkedin.com/in/pedro-gualberto-9a2b62316/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors hover-zoom"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a 
               href="mailto:pedro.gualberto@email.com" 
-              className="text-gray-400 hover:text-primary transition-colors"
+              className="text-gray-400 hover:text-primary transition-colors hover-zoom"
               aria-label="Email"
             >
               <Mail className="h-6 w-6" />
